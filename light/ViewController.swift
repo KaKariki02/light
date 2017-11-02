@@ -9,9 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var lightOn = true
+    
+    @IBAction func click(_ sender: Any) {
+        lightOn = !lightOn
+        click()
+    }
+    
+    func click() {
+        view.backgroundColor = lightOn ? .white : .black 
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        click()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
